@@ -13,7 +13,7 @@
     }
 
     body {
-      font-family: Inter, Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f8fafc;
       color: #0f172a;
       line-height: 1.7;
@@ -22,9 +22,8 @@
     nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid #e2e8f0;
       padding: 18px 8%;
       display: flex;
@@ -32,17 +31,17 @@
       align-items: center;
     }
 
-    nav .logo {
+    .logo {
+      font-size: 1.2rem;
       font-weight: 800;
-      font-size: 1.1rem;
       color: #0f172a;
     }
 
     nav a {
       color: #334155;
       text-decoration: none;
-      margin-left: 22px;
-      font-weight: 600;
+      margin-left: 24px;
+      font-weight: 700;
       font-size: 0.95rem;
     }
 
@@ -51,64 +50,68 @@
     }
 
     header {
-      min-height: 92vh;
+      min-height: 82vh;
       display: flex;
       align-items: center;
       padding: 90px 8%;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #2563eb 100%);
-      color: white;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 52%, #2563eb 100%);
+      color: #ffffff;
     }
 
     .hero {
       max-width: 900px;
     }
 
-    .hero span {
+    .badge {
       display: inline-block;
       padding: 8px 14px;
       border: 1px solid rgba(255,255,255,0.25);
       border-radius: 999px;
-      margin-bottom: 22px;
       color: #bfdbfe;
-      font-weight: 600;
+      font-weight: 700;
+      margin-bottom: 22px;
+      background: rgba(255,255,255,0.06);
     }
 
     .hero h1 {
-      font-size: clamp(2.8rem, 7vw, 5.8rem);
+      font-size: clamp(2.8rem, 6vw, 5.4rem);
       line-height: 1;
+      letter-spacing: -2px;
       margin-bottom: 20px;
-      letter-spacing: -3px;
     }
 
     .hero h2 {
+      color: #dbeafe;
       font-size: clamp(1.2rem, 2vw, 1.7rem);
       font-weight: 500;
-      color: #dbeafe;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
 
     .hero p {
       max-width: 760px;
       color: #cbd5e1;
       font-size: 1.05rem;
-      margin-bottom: 35px;
+      margin-bottom: 34px;
     }
 
     .btn {
       display: inline-block;
       padding: 13px 24px;
       margin: 8px 10px 8px 0;
-      background: #ffffff;
-      color: #0f172a;
-      text-decoration: none;
       border-radius: 10px;
+      text-decoration: none;
       font-weight: 800;
       transition: 0.25s;
     }
 
+    .btn.primary {
+      background: #ffffff;
+      color: #0f172a;
+    }
+
     .btn.secondary {
       background: transparent;
-      color: white;
+      color: #ffffff;
       border: 1px solid rgba(255,255,255,0.35);
     }
 
@@ -127,7 +130,7 @@
     }
 
     .section-title h2 {
-      font-size: 2.4rem;
+      font-size: 2.35rem;
       letter-spacing: -1px;
       color: #0f172a;
       margin-bottom: 10px;
@@ -135,7 +138,7 @@
 
     .section-title p {
       color: #64748b;
-      max-width: 760px;
+      max-width: 780px;
     }
 
     .grid {
@@ -145,7 +148,7 @@
     }
 
     .card {
-      background: white;
+      background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 20px;
       padding: 28px;
@@ -159,8 +162,8 @@
     }
 
     .card h3 {
-      color: #0f172a;
       font-size: 1.25rem;
+      color: #0f172a;
       margin-bottom: 12px;
     }
 
@@ -171,6 +174,7 @@
 
     ul {
       padding-left: 20px;
+      margin-top: 10px;
     }
 
     .tag {
@@ -180,7 +184,7 @@
       border: 1px solid #bfdbfe;
       padding: 6px 10px;
       border-radius: 999px;
-      margin: 10px 5px 0 0;
+      margin: 12px 5px 0 0;
       font-size: 0.83rem;
       font-weight: 700;
     }
@@ -191,10 +195,31 @@
       height: 100%;
     }
 
-    .project-card .open-text {
+    .open-text {
       margin-top: 18px;
-      color: #2563eb;
+      color: #2563eb !important;
       font-weight: 800;
+    }
+
+    .dark-section {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .dark-section .section-title h2,
+    .dark-section .card h3 {
+      color: #ffffff;
+    }
+
+    .dark-section .section-title p,
+    .dark-section .card p,
+    .dark-section .card li {
+      color: #cbd5e1;
+    }
+
+    .dark-section .card {
+      background: #1e293b;
+      border-color: #334155;
     }
 
     .timeline {
@@ -203,7 +228,7 @@
     }
 
     .timeline-item {
-      background: white;
+      background: #ffffff;
       border-left: 5px solid #2563eb;
       border-radius: 14px;
       padding: 22px;
@@ -218,35 +243,20 @@
 
     .muted {
       color: #64748b;
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    .dark-section {
-      background: #0f172a;
-      color: white;
-    }
-
-    .dark-section .section-title h2,
-    .dark-section .card h3 {
-      color: white;
-    }
-
-    .dark-section .section-title p,
-    .dark-section .card p,
-    .dark-section .card li {
-      color: #cbd5e1;
-    }
-
-    .dark-section .card {
-      background: #1e293b;
-      border-color: #334155;
+    #contact a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 700;
     }
 
     footer {
       padding: 30px 8%;
       text-align: center;
       color: #64748b;
-      background: white;
+      background: #ffffff;
       border-top: 1px solid #e2e8f0;
     }
 
@@ -255,14 +265,20 @@
         display: block;
         text-align: center;
       }
-      nav .links {
+
+      .links {
         margin-top: 12px;
       }
+
       nav a {
         display: inline-block;
         margin: 6px 8px;
       }
-      
+
+      header {
+        min-height: auto;
+        padding: 75px 8%;
+      }
     }
   </style>
 </head>
@@ -281,7 +297,17 @@
 
   <header>
     <div class="hero">
-$1
+      <span class="badge">Computer Science Engineering Graduate</span>
+      <h1>Benson Benedict</h1>
+      <h2>Full-Stack Developer | AI & Mobile App Enthusiast</h2>
+      <p>
+        Motivated Computer Science Engineering graduate with hands-on experience in full-stack development,
+        Flutter, Supabase, Python, Java, SQL, and MERN Stack. I build scalable, user-focused applications
+        with strong foundations in software engineering, databases, and problem solving.
+      </p>
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="https://github.com/bensonbenedict" target="_blank" class="btn secondary">GitHub</a>
+      <a href="mailto:bensonbenedictt@gmail.com" class="btn secondary">Contact Me</a>
     </div>
   </header>
 
@@ -339,7 +365,7 @@ $1
   <section id="projects">
     <div class="section-title">
       <h2>Featured Projects</h2>
-      <p>Click any project card to open the project repository. Replace the links with exact repository links if needed.</p>
+      <p>Academic and self-developed projects focused on AI, cybersecurity, mobile applications, and full-stack development.</p>
     </div>
     <div class="grid">
       <a class="project-card" href="https://github.com/bensonbenedict" target="_blank">
