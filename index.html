@@ -356,12 +356,26 @@
       }
 
       .typing-text {
-        white-space: normal;
-        border-right: none;
-        animation: none;
-      }
-    }
-  </style>
+    white-space: normal;
+    border-right: none;
+    animation: none;
+}
+}
+
+
+.cursor-glow {
+  position: fixed;
+  width: 18px;
+  height: 18px;
+  background: #2563eb;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px #2563eb, 0 0 40px #2563eb;
+  z-index: 9999;
+}
+
+</style>
 </head>
 <body>
   <nav>
@@ -581,5 +595,15 @@
   <footer>
     <p>© 2026 Benson Benedict. All Rights Reserved.</p>
   </footer>
+  <script>
+const cursor = document.createElement("div");
+cursor.classList.add("cursor-glow");
+document.body.appendChild(cursor);
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+</script>
 </body>
 </html>
