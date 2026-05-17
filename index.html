@@ -9,213 +9,323 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      color: #38bdf8;
-      margin-bottom: 10px;
-    }
-
-    .hero h2 {
-      font-size: 1.3rem;
-      color: #cbd5e1;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 30px;
-      color: #94a3b8;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      margin: 8px;
-      background: #38bdf8;
+      font-family: Inter, Arial, sans-serif;
+      background: #f8fafc;
       color: #0f172a;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #0ea5e9;
-      transform: translateY(-3px);
+      line-height: 1.7;
     }
 
     nav {
       position: sticky;
       top: 0;
-      background: #020617;
-      padding: 15px;
-      text-align: center;
-      z-index: 10;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e2e8f0;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #0f172a;
     }
 
     nav a {
-      color: #e5e7eb;
+      color: #334155;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
-    }
-
-    section {
-      padding: 70px 10%;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      color: #38bdf8;
-      margin-bottom: 25px;
-      text-align: center;
-    }
-
-    .about, .education, .contact {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      color: #cbd5e1;
-    }
-
-    .skills-grid, .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .card h3 {
-      color: #7dd3fc;
-      margin-bottom: 10px;
-    }
-
-    .card p, .card li {
-      color: #cbd5e1;
+      margin-left: 22px;
+      font-weight: 600;
       font-size: 0.95rem;
     }
 
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    header {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      padding: 90px 8%;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #2563eb 100%);
+      color: white;
+    }
+
+    .hero {
+      max-width: 900px;
+    }
+
+    .hero span {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 999px;
+      margin-bottom: 22px;
+      color: #bfdbfe;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 5.8rem);
+      line-height: 1;
+      margin-bottom: 20px;
+      letter-spacing: -3px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.2rem, 2vw, 1.7rem);
+      font-weight: 500;
+      color: #dbeafe;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      margin: 8px 10px 8px 0;
+      background: #ffffff;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 800;
+      transition: 0.25s;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+    }
+
+    section {
+      padding: 85px 8%;
+    }
+
+    .section-title {
+      max-width: 900px;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 2.4rem;
+      letter-spacing: -1px;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #64748b;
+      max-width: 760px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.11);
+    }
+
+    .card h3 {
+      color: #0f172a;
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .card p, .card li {
+      color: #475569;
+      font-size: 0.98rem;
+    }
+
     ul {
-      list-style: none;
-      padding-left: 0;
+      padding-left: 20px;
     }
 
     .tag {
       display: inline-block;
-      background: #334155;
-      color: #e0f2fe;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
       padding: 6px 10px;
-      border-radius: 15px;
-      margin: 5px 4px 0 0;
-      font-size: 0.85rem;
+      border-radius: 999px;
+      margin: 10px 5px 0 0;
+      font-size: 0.83rem;
+      font-weight: 700;
+    }
+
+    .project-card {
+      text-decoration: none;
+      display: block;
+      height: 100%;
+    }
+
+    .project-card .open-text {
+      margin-top: 18px;
+      color: #2563eb;
+      font-weight: 800;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      background: white;
+      border-left: 5px solid #2563eb;
+      border-radius: 14px;
+      padding: 22px;
+      border-top: 1px solid #e2e8f0;
+      border-right: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 5px;
+    }
+
+    .muted {
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .dark-section {
+      background: #0f172a;
+      color: white;
+    }
+
+    .dark-section .section-title h2,
+    .dark-section .card h3 {
+      color: white;
+    }
+
+    .dark-section .section-title p,
+    .dark-section .card p,
+    .dark-section .card li {
+      color: #cbd5e1;
+    }
+
+    .dark-section .card {
+      background: #1e293b;
+      border-color: #334155;
     }
 
     footer {
+      padding: 30px 8%;
       text-align: center;
-      padding: 25px;
-      background: #020617;
-      color: #94a3b8;
+      color: #64748b;
+      background: white;
+      border-top: 1px solid #e2e8f0;
     }
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.2rem;
+    @media (max-width: 760px) {
+      nav {
+        display: block;
+        text-align: center;
       }
-
+      nav .links {
+        margin-top: 12px;
+      }
       nav a {
         display: inline-block;
-        margin: 8px;
+        margin: 6px 8px;
       }
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
+    <div class="logo">Benson Benedict</div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certificates</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
   <header>
     <div class="hero">
+      <span>Computer Science Engineering Graduate</span>
       <h1>Benson Benedict</h1>
-      <h2>Computer Science Engineering Student | Full-Stack & AI Enthusiast</h2>
+      <h2>Full-Stack Developer | AI & Mobile App Enthusiast</h2>
       <p>
-        Final-year Computer Science Engineering student with hands-on experience in Flutter,
-        Supabase, Python, Machine Learning, and full-stack development. Passionate about
-        building real-world applications that solve practical problems.
+        Motivated Computer Science Engineering graduate with hands-on experience in full-stack development,
+        Flutter, Supabase, Python, Java, SQL, and MERN Stack. I build scalable, user-focused applications
+        with strong foundations in software engineering, databases, and problem solving.
       </p>
       <a href="#projects" class="btn">View Projects</a>
-      <a href="mailto:bensonbenedictt@gmail.com" class="btn">Contact Me</a>
-      <a href="https://github.com/bensonbenedictt" target="_blank" class="btn">GitHub</a>
+      <a href="https://github.com/bensonbenedict" target="_blank" class="btn secondary">GitHub</a>
+      <a href="mailto:bensonbenedictt@gmail.com" class="btn secondary">Contact Me</a>
     </div>
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
-    <div class="about">
+    <div class="section-title">
+      <h2>About Me</h2>
       <p>
-        I am a B.Tech Computer Science and Engineering student at TKM Institute of Technology.
-        My interests include mobile app development, artificial intelligence, cybersecurity,
-        and full-stack web development. I enjoy creating projects that combine clean design,
-        useful features, and practical technology.
+        I am a B.Tech Computer Science and Engineering graduate from TKM Institute of Technology, Kollam.
+        My interests include full-stack web development, mobile application development, artificial intelligence,
+        cybersecurity, and database-driven systems.
       </p>
     </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
+  <section id="skills" class="dark-section">
+    <div class="section-title">
+      <h2>Technical Skills</h2>
+      <p>Technologies and tools I have worked with during academic projects, internships, and self-learning.</p>
+    </div>
+    <div class="grid">
       <div class="card">
         <h3>Programming</h3>
         <span class="tag">Python</span>
         <span class="tag">Java</span>
         <span class="tag">C</span>
         <span class="tag">SQL</span>
+        <span class="tag">Dart</span>
       </div>
       <div class="card">
         <h3>Development</h3>
         <span class="tag">Flutter</span>
-        <span class="tag">React</span>
         <span class="tag">MERN Stack</span>
         <span class="tag">Supabase</span>
         <span class="tag">Firebase</span>
+        <span class="tag">PostgreSQL</span>
       </div>
       <div class="card">
         <h3>AI / ML</h3>
@@ -223,77 +333,128 @@
         <span class="tag">TensorFlow</span>
         <span class="tag">PyTorch</span>
         <span class="tag">OpenCV</span>
+        <span class="tag">CNN</span>
       </div>
       <div class="card">
-        <h3>Tools</h3>
-        <span class="tag">Git</span>
-        <span class="tag">GitHub</span>
-        <span class="tag">VS Code</span>
-        <span class="tag">Figma</span>
+        <h3>Professional Skills</h3>
+        <span class="tag">Problem Solving</span>
+        <span class="tag">Communication</span>
+        <span class="tag">Teamwork</span>
+        <span class="tag">Adaptability</span>
       </div>
     </div>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="card">
-        <h3>CreoKonnect</h3>
-        <p>
-          A niche project-based marketplace that connects content creators with creative
-          agencies and freelancers worldwide.
-        </p>
-        <p><strong>Features:</strong> Creator/provider roles, project posting, job feed, in-app messaging, and subscription model.</p>
-        <span class="tag">Flutter</span>
-        <span class="tag">Supabase</span>
-        <span class="tag">PostgreSQL</span>
-        <span class="tag">Stripe</span>
-      </div>
+    <div class="section-title">
+      <h2>Featured Projects</h2>
+      <p>Click any project card to open the project repository. Replace the links with exact repository links if needed.</p>
+    </div>
+    <div class="grid">
+      <a class="project-card" href="https://github.com/bensonbenedict" target="_blank">
+        <div class="card">
+          <h3>CreoKonnect</h3>
+          <p>
+            Mobile-based marketplace platform connecting content creators with creative agencies and freelancers
+            for project-based collaboration.
+          </p>
+          <ul>
+            <li>Project posting, proposal submission, and in-app messaging</li>
+            <li>Secure authentication and PostgreSQL database management</li>
+            <li>Stripe payment gateway for subscription handling</li>
+          </ul>
+          <span class="tag">Flutter</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Stripe API</span>
+          <span class="tag">Firebase</span>
+          <p class="open-text">Open Project →</p>
+        </div>
+      </a>
 
-      <div class="card">
-        <h3>AI Cybersecurity Threat Detection</h3>
-        <p>
-          Machine learning-based cybersecurity system for detecting network threats using
-          traffic flow features and classification models.
-        </p>
-        <p><strong>Features:</strong> Threat classification, CSV-based prediction, and traffic analysis.</p>
-        <span class="tag">Python</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">CICFlowMeter</span>
-        <span class="tag">Flask</span>
-      </div>
-
-      <div class="card">
-        <h3>TCM Diabetes Detection</h3>
-        <p>
-          AI-based diabetes detection project using Traditional Chinese Medicine concepts
-          and image analysis techniques.
-        </p>
-        <p><strong>Features:</strong> Tongue image analysis, CNN-based classification, and early disease prediction.</p>
-        <span class="tag">Python</span>
-        <span class="tag">TensorFlow</span>
-        <span class="tag">PyTorch</span>
-        <span class="tag">OpenCV</span>
-      </div>
+      <a class="project-card" href="https://github.com/bensonbenedict" target="_blank">
+        <div class="card">
+          <h3>Traditional Chinese Medicine Diabetes Detection</h3>
+          <p>
+            AI-based system for detecting Diabetes Mellitus using Traditional Chinese Medicine principles and
+            tongue image analysis.
+          </p>
+          <ul>
+            <li>Built CNN model for tongue image classification</li>
+            <li>Used OpenCV for preprocessing and feature enhancement</li>
+            <li>Focused on early diabetes prediction through image analysis</li>
+          </ul>
+          <span class="tag">Python</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">CNN</span>
+          <p class="open-text">Open Project →</p>
+        </div>
+      </a>
     </div>
   </section>
 
   <section id="education">
-    <h2>Education</h2>
-    <div class="education card">
-      <h3>B.Tech in Computer Science and Engineering</h3>
-      <p>TKM Institute of Technology</p>
-      <p>CGPA: 7.14</p>
-      <p>Expected Graduation: 2026</p>
+    <div class="section-title">
+      <h2>Education</h2>
+      <p>Academic background and qualifications.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Bachelor of Technology in Computer Science & Engineering</h3>
+        <p class="muted">TKM Institute of Technology, Kollam, Kerala | May 2026</p>
+        <p>Cumulative GPA: 7.14/10.0</p>
+        <p>Relevant Coursework: Data Structures and Algorithms, Database Management Systems, Python, Java OOP, C Programming, Operating Systems</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Higher Secondary Education — Class XII</h3>
+        <p class="muted">CBSE Board | Kollam, Kerala | 2022</p>
+        <p>Percentage: 70%</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Secondary Education — Class X</h3>
+        <p class="muted">ICSE Board | Kollam, Kerala | 2020</p>
+        <p>Percentage: 87%</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="dark-section">
+    <div class="section-title">
+      <h2>Certifications & Internship</h2>
+      <p>Courses and internship experience that strengthened my technical foundation.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Machine Learning</h3>
+        <p class="muted">NPTEL — IIT Madras</p>
+        <p>Learned supervised and unsupervised learning, preprocessing, feature extraction, classification, and predictive analytics.</p>
+      </div>
+      <div class="card">
+        <h3>Software Conceptual Design</h3>
+        <p class="muted">NPTEL — IIT Bombay</p>
+        <p>Studied software design methodologies, system modelling, requirement analysis, UML modelling, and conceptual architecture design.</p>
+      </div>
+      <div class="card">
+        <h3>MERN Stack Development Internship</h3>
+        <p class="muted">Luminar Technolab, Kochi</p>
+        <p>Completed a 3-week internship with practical exposure to full-stack web technologies and responsive web application development.</p>
+      </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <p>Email: <a href="mailto:bensonbenedictt@gmail.com" style="color:#38bdf8;">bensonbenedictt@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/bensonbenedictt" target="_blank" style="color:#38bdf8;">github.com/bensonbenedictt</a></p>
-      <p>LinkedIn: Add your LinkedIn profile link here</p>
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Open to software development, full-stack, mobile app development, and AI-related opportunities.</p>
+    </div>
+    <div class="card">
+      <p><strong>Email:</strong> <a href="mailto:bensonbenedictt@gmail.com">bensonbenedictt@gmail.com</a></p>
+      <p><strong>Phone:</strong> +91 8590677073</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/bensonbenedict" target="_blank">github.com/bensonbenedict</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/benson-benedict-82b2bb37b" target="_blank">linkedin.com/in/benson-benedict-82b2bb37b</a></p>
+      <p><strong>Languages:</strong> English, Malayalam, Hindi, Tamil</p>
     </div>
   </section>
 
