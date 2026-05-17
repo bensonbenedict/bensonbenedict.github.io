@@ -59,8 +59,42 @@
       color: white;
     }
 
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 55px;
+      align-items: center;
+      width: 100%;
+    }
+
     .hero {
       max-width: 900px;
+    }
+
+    .profile-frame {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.28);
+    }
+
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 28%;
+      border-radius: 22px;
+      display: block;
+      filter: contrast(1.04) saturate(1.02);
+    }
+
+    .photo-caption {
+      margin-top: 14px;
+      color: #bfdbfe;
+      font-weight: 700;
+      text-align: center;
+      font-size: 0.95rem;
     }
 
     .hero span {
@@ -262,6 +296,13 @@
         display: inline-block;
         margin: 6px 8px;
       }
+      .hero-layout {
+        grid-template-columns: 1fr;
+      }
+      .profile-frame {
+        max-width: 360px;
+        margin: 0 auto;
+      }
     }
   </style>
 </head>
@@ -279,18 +320,13 @@
   </nav>
 
   <header>
-    <div class="hero">
-      <span>Computer Science Engineering Graduate</span>
-      <h1>Benson Benedict</h1>
-      <h2>Full-Stack Developer | AI & Mobile App Enthusiast</h2>
-      <p>
-        Motivated Computer Science Engineering graduate with hands-on experience in full-stack development,
-        Flutter, Supabase, Python, Java, SQL, and MERN Stack. I build scalable, user-focused applications
-        with strong foundations in software engineering, databases, and problem solving.
-      </p>
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="https://github.com/bensonbenedict" target="_blank" class="btn secondary">GitHub</a>
-      <a href="mailto:bensonbenedictt@gmail.com" class="btn secondary">Contact Me</a>
+    <div class="hero-layout">
+      <div class="hero">$1</div>
+
+      <div class="profile-frame">
+        <img src="profile.jpg" alt="Professional photo of Benson Benedict" class="profile-photo" />
+        <p class="photo-caption">B.Tech CSE Graduate | Full-Stack Developer</p>
+      </div>
     </div>
   </header>
 
@@ -351,6 +387,27 @@
       <p>Click any project card to open the project repository. Replace the links with exact repository links if needed.</p>
     </div>
     <div class="grid">
+      <a class="project-card" href="https://github.com/bensonbenedict" target="_blank">
+        <div class="card">
+          <h3>AI Cybersecurity Threat Detection</h3>
+          <p>
+            Machine learning-based cybersecurity project designed to detect and classify network threats using
+            traffic flow features and trained prediction models.
+          </p>
+          <ul>
+            <li>Analyzes network traffic features for threat prediction</li>
+            <li>Uses ML classification to identify suspicious or harmful traffic</li>
+            <li>Includes CSV-based prediction workflow and traffic analysis support</li>
+          </ul>
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">CICFlowMeter</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Cybersecurity</span>
+          <p class="open-text">Open Project →</p>
+        </div>
+      </a>
+
       <a class="project-card" href="https://github.com/bensonbenedict" target="_blank">
         <div class="card">
           <h3>CreoKonnect</h3>
